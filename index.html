@@ -965,7 +965,15 @@
   .product-card:nth-child(6) { animation-delay: .3s; }
   .product-card:nth-child(7) { animation-delay: .35s; }
 
-  /* ─── RESPONSIVE (1024 – 1280) ─── */
+  /* ─── MOBILE ELEMENTS (hidden on desktop) ─── */
+  .mobile-filter-btn { display: none; }
+  .mobile-bottom-nav { display: none; }
+  .filter-overlay { display: none; }
+  .mobile-hamburger { display: none; }
+  .mobile-header-actions { display: none; }
+  .sidebar-close { display: none; }
+
+  /* ─── RESPONSIVE: LARGE DESKTOP → SMALL DESKTOP ─── */
   @media (max-width: 1200px) {
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -991,6 +999,302 @@
     .header-inner {
       padding: 0 24px;
     }
+  }
+
+  /* ─── RESPONSIVE: TABLET (≤ 860px) ─── */
+  @media (max-width: 860px) {
+    .header-nav-link span:not(.badge) {
+      display: none;
+    }
+    .header-nav-link {
+      padding: 8px;
+    }
+    .header-nav {
+      gap: 4px;
+    }
+    .content-layout {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 320px;
+      max-width: 85vw;
+      height: 100vh;
+      max-height: 100vh;
+      z-index: 200;
+      background: var(--background);
+      padding: 16px;
+      overflow-y: auto;
+      box-shadow: var(--shadow-depth-3);
+      animation: slideInLeft .25s ease;
+    }
+    .sidebar.open { display: flex; }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .filter-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.4);
+      z-index: 199;
+      backdrop-filter: blur(2px);
+    }
+    .filter-overlay.open { display: block; }
+    .mobile-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: var(--card);
+      border: 1.5px solid var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .15s;
+    }
+    .mobile-filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .mobile-filter-btn svg { width: 16px; height: 16px; }
+    .content-top-bar {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .page-title-section {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .page-title-meta {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      padding: 32px 24px 24px;
+    }
+  }
+
+  /* ─── RESPONSIVE: MOBILE (≤ 600px) ─── */
+  @media (max-width: 600px) {
+    .page-container {
+      padding: 0 16px;
+    }
+    .header-inner {
+      padding: 0 12px;
+      height: 56px;
+      gap: 10px;
+    }
+    .logo-text { font-size: 17px; }
+    .search-bar {
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 8px;
+    }
+    .search-bar input { font-size: 13px; }
+    .header-nav { display: none; }
+    .mobile-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .mobile-header-actions button {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,.85);
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: background .15s;
+      position: relative;
+    }
+    .mobile-header-actions button:hover { background: rgba(255,255,255,.12); }
+    .mobile-header-actions svg { width: 22px; height: 22px; }
+    .mobile-header-actions .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--destructive);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .breadcrumb {
+      font-size: 12px;
+      padding: 12px 0 0;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .page-title-section h1 { font-size: 20px; }
+    .page-title-section { padding: 12px 0 16px; }
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .pc-image { aspect-ratio: 1/1; }
+    .pc-body { padding: 10px 12px 12px; }
+    .pc-name { font-size: 13px !important; -webkit-line-clamp: 2; }
+    .pc-price { font-size: 15px; }
+    .pc-price-unit { font-size: 11px; }
+    .pc-specs { display: none; }
+    .pc-supplier-meta .trust-badges { display: none; }
+    .pc-supplier-rating .yrs { display: none; }
+    .pc-supplier-name { font-size: 11px; }
+    .pc-supplier-meta .loc { font-size: 10px; }
+    .pc-supplier-rating .rating-text { font-size: 10px; }
+    .pc-supplier-rating .stars svg { width: 10px; height: 10px; }
+    .pc-cta-row { flex-direction: column; gap: 6px; }
+    .pc-cta { padding: 9px 6px; font-size: 12px; border-radius: 8px; }
+    .pc-cta svg { width: 13px; height: 13px; }
+    .pc-cta-whatsapp {
+      width: 100%;
+      height: 36px;
+      border-radius: 8px;
+      flex-shrink: 1;
+    }
+    .quote-banner {
+      padding: 20px 16px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .quote-banner-text h3 { font-size: 16px; }
+    .quote-banner-text p { font-size: 13px; }
+    .quote-banner-form input, .quote-banner .country-code { height: 40px; font-size: 13px; }
+    .quote-banner .submit-btn { height: 44px; font-size: 13px; }
+    .price-section { margin-top: 24px; }
+    .price-section-header { padding: 14px 16px; font-size: 14px; }
+    .price-row { padding: 12px 16px; font-size: 13px; }
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 32px 16px 24px;
+    }
+    .footer-brand p { max-width: none; }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+    }
+    /* Mobile bottom nav */
+    .mobile-bottom-nav {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card);
+      border-top: 1px solid var(--neutral-200);
+      z-index: 100;
+      padding: 6px 0;
+      padding-bottom: max(6px, env(safe-area-inset-bottom));
+      box-shadow: 0 -2px 10px rgba(0,0,0,.06);
+      justify-content: space-around;
+      align-items: center;
+    }
+    .mobile-bottom-nav .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 4px 12px;
+      color: var(--neutral-600);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      transition: color .15s;
+    }
+    .mobile-bottom-nav .nav-item.active { color: var(--primary); }
+    .mobile-bottom-nav .nav-item svg { width: 22px; height: 22px; }
+    .mobile-bottom-nav .nav-item.post-btn {
+      position: relative;
+      top: -12px;
+      background: var(--primary);
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      padding: 0;
+      box-shadow: 0 4px 14px rgba(29,132,128,.35);
+      justify-content: center;
+      font-size: 0;
+    }
+    .mobile-bottom-nav .nav-item.post-btn svg { width: 24px; height: 24px; }
+    .footer { padding-bottom: 72px; }
+    .product-list-spacer { height: 72px; }
+    .sidebar {
+      width: 100%;
+      max-width: 100vw;
+      border-radius: 0;
+    }
+    .sidebar-close {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0 16px;
+      border-bottom: 1px solid var(--neutral-200);
+      margin-bottom: 8px;
+    }
+    .sidebar-close-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--neutral-900);
+    }
+    .sidebar-close-btn {
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: var(--neutral-600);
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      transition: background .15s;
+    }
+    .sidebar-close-btn:hover { background: var(--neutral-200); }
+    .sidebar-close-btn svg { width: 22px; height: 22px; }
+  }
+
+  /* ─── RESPONSIVE: SMALL MOBILE (≤ 380px) ─── */
+  @media (max-width: 380px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .pc-image { aspect-ratio: 4/3; }
+    .pc-specs { display: flex; }
+    .pc-cta-row { flex-direction: row; }
+    .pc-cta-whatsapp { width: 40px; height: 40px; flex-shrink: 0; }
   }
 
   /* ─── SCROLLBAR ─── */
@@ -1040,6 +1344,16 @@
         Account
       </button>
     </nav>
+    <!-- Mobile header icons (visible ≤600px) -->
+    <div class="mobile-header-actions">
+      <button aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="badge">3</span>
+      </button>
+      <button aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -1071,8 +1385,18 @@
   <!-- ═══ SIDEBAR + CONTENT ═══ -->
   <div class="content-layout">
 
+    <!-- Filter Overlay (mobile) -->
+    <div class="filter-overlay" id="filterOverlay" onclick="closeSidebar()"></div>
+
     <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
+      <!-- Close button (visible on mobile only) -->
+      <div class="sidebar-close">
+        <span class="sidebar-close-title">Filters</span>
+        <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close filters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
 
       <!-- Location Filter -->
       <div class="sidebar-card">
@@ -1098,7 +1422,7 @@
       <!-- Price Filter -->
       <div class="sidebar-card">
         <div class="sidebar-card-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><text x="5" y="19" font-size="18" font-weight="700" stroke="none" fill="currentColor" font-family="Inter,Arial,sans-serif">&#8377;</text></svg>
           Price Range
         </div>
         <div class="sidebar-card-body">
@@ -1173,6 +1497,12 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
+
+      <!-- Mobile filter trigger -->
+      <button class="mobile-filter-btn" onclick="openSidebar()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+        Filters
+      </button>
 
       <div class="product-grid">
 
@@ -1493,7 +1823,7 @@
       <!-- ═══ PRICE TABLE ═══ -->
       <div class="price-section">
         <div class="price-section-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><text x="5" y="19" font-size="18" font-weight="700" stroke="none" fill="currentColor" font-family="Inter,Arial,sans-serif">&#8377;</text></svg>
           Table Price Range in Delhi
         </div>
         <div class="price-table">
@@ -1566,13 +1896,49 @@
   </div>
 </footer>
 
+<!-- Mobile Bottom Nav -->
+<nav class="mobile-bottom-nav">
+  <a class="nav-item active" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Categories
+  </a>
+  <button class="nav-item post-btn" aria-label="Post Requirement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    Saved
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    Account
+  </a>
+</nav>
+
 <script>
+// Product card click
 document.querySelectorAll('.product-card').forEach(card => {
   card.addEventListener('click', e => {
     if (e.target.closest('.pc-cta, .pc-cta-whatsapp, .wishlist-btn, .pc-supplier-name')) return;
     window.location.href = 'product-detail.html';
   });
 });
+
+// Mobile sidebar/filter drawer
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('filterOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('filterOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
 </script>
 </body>
 </html>
