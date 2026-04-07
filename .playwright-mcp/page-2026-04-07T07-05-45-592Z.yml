@@ -1,0 +1,397 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5]
+        - generic [ref=e8]: IndiaMART
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - textbox "Search for tables, furniture, electronics..." [ref=e13]: Table
+        - button "Search by image" [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+      - navigation [ref=e18]:
+        - button "Notifications" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+          - generic [ref=e23]: "3"
+        - button "Messages" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+          - text: Messages
+        - button "Saved" [ref=e27] [cursor=pointer]:
+          - img [ref=e28]
+          - text: Saved
+        - button "Account" [ref=e30] [cursor=pointer]:
+          - img [ref=e31]
+          - text: Account
+  - generic [ref=e34]:
+    - navigation [ref=e35]:
+      - link "Home" [ref=e36] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e37]: /
+      - link "Furniture" [ref=e38] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e39]: /
+      - link "Table" [ref=e40] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e41]: /
+      - generic [ref=e42]: Delhi
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - heading "Tables in Delhi" [level=1] [ref=e45]
+        - paragraph [ref=e46]:
+          - text: Starting from
+          - strong [ref=e47]: ₹3,350
+          - text: · Updated Jan 2026
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - text: Showing
+          - strong [ref=e50]: 250+
+          - text: suppliers
+        - button "Sort" [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - text: Sort
+    - generic [ref=e54]:
+      - complementary [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - img [ref=e58]
+            - text: Location
+          - generic [ref=e62]:
+            - generic [ref=e63] [cursor=pointer]: Delhi
+            - generic [ref=e64] [cursor=pointer]: Gurugram
+            - generic [ref=e65] [cursor=pointer]: Noida
+            - generic [ref=e66] [cursor=pointer]: Ghaziabad
+            - generic [ref=e67] [cursor=pointer]: Faridabad
+            - generic [ref=e68] [cursor=pointer]: Greater Noida
+            - generic [ref=e69] [cursor=pointer]: Sonipat
+            - generic [ref=e70] [cursor=pointer]: Rohtak
+            - generic [ref=e71] [cursor=pointer]: Meerut
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - img [ref=e74]
+            - text: Price Range
+          - generic [ref=e77]:
+            - button "Below ₹2,000" [ref=e78] [cursor=pointer]
+            - button "₹2K – ₹5K" [ref=e79] [cursor=pointer]
+            - button "₹5K – ₹15K" [ref=e80] [cursor=pointer]
+            - button "Above ₹15K" [ref=e81] [cursor=pointer]
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - img [ref=e84]
+            - text: Filters
+          - generic [ref=e86]:
+            - button "Verified Only" [ref=e87] [cursor=pointer]:
+              - img [ref=e88]
+              - text: Verified Only
+            - button "4+ Rating" [ref=e91] [cursor=pointer]:
+              - img [ref=e92]
+              - text: 4+ Rating
+            - button "With Video" [ref=e94] [cursor=pointer]:
+              - img [ref=e95]
+              - text: With Video
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - img [ref=e100]
+            - text: Table Types
+          - generic [ref=e106]:
+            - generic [ref=e107] [cursor=pointer]:
+              - img "Rectangle Table" [ref=e109]
+              - generic [ref=e110]: Rectangle
+            - generic [ref=e111] [cursor=pointer]:
+              - img "Round Table" [ref=e113]
+              - generic [ref=e114]: Round
+            - generic [ref=e115] [cursor=pointer]:
+              - img "Fiber Table" [ref=e117]
+              - generic [ref=e118]: Fiber
+            - generic [ref=e119] [cursor=pointer]:
+              - img "Granite Table" [ref=e121]
+              - generic [ref=e122]: Granite
+            - generic [ref=e123] [cursor=pointer]:
+              - img [ref=e125]
+              - generic [ref=e128]: All Types
+      - main [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]:
+              - img "Wooden 6-Seater X-Base Dining Table" [ref=e133]
+              - generic [ref=e134]:
+                - img [ref=e135]
+                - text: "+6"
+              - button [ref=e139]:
+                - img [ref=e140]
+            - generic [ref=e142]:
+              - link "Wooden 6-Seater X-Base Dining Table" [ref=e143]:
+                - /url: product-detail.html
+              - generic [ref=e144]:
+                - generic [ref=e145]: ₹35,000
+                - generic [ref=e146]: / Piece
+              - generic [ref=e147]:
+                - generic [ref=e148]: 6 Seater
+                - generic [ref=e150]: Rubber Wood
+                - generic [ref=e152]: Rectangular
+                - generic [ref=e154]: Natural finish
+              - generic [ref=e156]:
+                - link "HS Enterprises" [ref=e157]:
+                  - /url: supplier-profile.html
+                - generic [ref=e158]:
+                  - generic [ref=e159]:
+                    - img [ref=e160]
+                    - text: New Delhi
+                  - generic [ref=e162]:
+                    - generic [ref=e163]: GST
+                    - generic [ref=e164]: TrustSEAL
+                - generic [ref=e165]:
+                  - generic [ref=e166]:
+                    - img [ref=e167]
+                    - img [ref=e169]
+                    - img [ref=e171]
+                    - img [ref=e173]
+                  - generic [ref=e175]: 3.8 (86)
+                  - generic [ref=e176]: 10 yrs
+              - generic [ref=e177]:
+                - button "WhatsApp" [ref=e178]:
+                  - img [ref=e179]
+                - button "Contact Supplier" [ref=e181]:
+                  - img [ref=e182]
+                  - text: Contact Supplier
+          - generic [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]:
+              - img "3X2 Ft Table, 4 Seater" [ref=e186]
+              - generic [ref=e187]:
+                - img [ref=e188]
+                - text: "+4"
+              - button [ref=e192]:
+                - img [ref=e193]
+            - generic [ref=e195]:
+              - generic [ref=e196]: 3X2 Ft. Table, 4 Seater
+              - generic [ref=e197]:
+                - generic [ref=e198]: ₹7,500
+                - generic [ref=e199]: / Piece
+              - generic [ref=e200]:
+                - generic [ref=e201]: Rectangular
+                - generic [ref=e203]: Particle Board
+                - generic [ref=e205]: Center Table
+                - generic [ref=e207]: Metal base
+              - generic [ref=e209]:
+                - generic [ref=e210]: Core Furniture Concepts
+                - generic [ref=e211]:
+                  - generic [ref=e212]:
+                    - img [ref=e213]
+                    - text: New Delhi
+                  - generic [ref=e216]: GST
+                - generic [ref=e218]: 7 yrs on IndiaMART
+              - generic [ref=e219]:
+                - button "WhatsApp" [ref=e220]:
+                  - img [ref=e221]
+                - button "Contact Supplier" [ref=e223]:
+                  - img [ref=e224]
+                  - text: Contact Supplier
+          - generic [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]:
+              - img "Fox B Grey Small Table" [ref=e228]
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - text: "+2"
+              - button [ref=e234]:
+                - img [ref=e235]
+            - generic [ref=e237]:
+              - generic [ref=e238]: Fox B Grey Small Table
+              - generic [ref=e239]:
+                - generic [ref=e240]: ₹3,350
+                - generic [ref=e241]: / Piece
+              - generic [ref=e242]:
+                - generic [ref=e243]: Work Table
+                - generic [ref=e245]: Plastic top
+              - generic [ref=e247]:
+                - generic [ref=e248]: Yuccabe Italia
+                - generic [ref=e249]:
+                  - generic [ref=e250]:
+                    - img [ref=e251]
+                    - text: New Delhi
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: GST
+                    - generic [ref=e255]: TrustSEAL
+                - generic [ref=e256]:
+                  - generic [ref=e257]:
+                    - img [ref=e258]
+                    - img [ref=e260]
+                    - img [ref=e262]
+                    - img [ref=e264]
+                  - generic [ref=e266]: 4.2 (79)
+                  - generic [ref=e267]: 11 yrs
+              - generic [ref=e268]:
+                - button "WhatsApp" [ref=e269]:
+                  - img [ref=e270]
+                - button "Contact Supplier" [ref=e272]:
+                  - img [ref=e273]
+                  - text: Contact Supplier
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - heading "Get Quotes from Verified Suppliers" [level=3] [ref=e278]
+              - paragraph [ref=e279]: Tell us what you need and verified suppliers will reach out to you with the best prices and delivery options.
+            - generic [ref=e280]:
+              - textbox "I want quotes for tables..." [ref=e281]: Table in Delhi
+              - generic [ref=e282]:
+                - textbox [ref=e283]: "+91"
+                - textbox "Your mobile number" [ref=e284]
+              - button "Submit Requirement" [ref=e285] [cursor=pointer]
+          - generic [ref=e286] [cursor=pointer]:
+            - generic [ref=e287]:
+              - img "Brown Nesting Tables" [ref=e288]
+              - button [ref=e289]:
+                - img [ref=e290]
+            - generic [ref=e292]:
+              - generic [ref=e293]: Brown Nesting Tables — Sheesham Wood, Set of 3
+              - generic [ref=e294]:
+                - generic [ref=e295]: ₹4,195
+                - generic [ref=e296]: / Piece
+              - generic [ref=e297]:
+                - generic [ref=e298]: Sheesham Wood
+                - generic [ref=e300]: Set of 3 stools
+              - generic [ref=e302]:
+                - generic [ref=e303]: Usha Furniture
+                - generic [ref=e304]:
+                  - generic [ref=e305]:
+                    - img [ref=e306]
+                    - text: New Delhi
+                  - generic [ref=e309]: GST
+                - generic [ref=e311]: 10 yrs on IndiaMART
+              - generic [ref=e312]:
+                - button "WhatsApp" [ref=e313]:
+                  - img [ref=e314]
+                - button "Contact Supplier" [ref=e316]:
+                  - img [ref=e317]
+                  - text: Contact Supplier
+          - generic [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]:
+              - img "Golden & White Coffee Center Table" [ref=e321]
+              - button [ref=e322]:
+                - img [ref=e323]
+            - generic [ref=e325]:
+              - generic [ref=e326]: Powder Coated Golden & White Coffee Center Table
+              - generic [ref=e327]:
+                - generic [ref=e328]: ₹14,000
+                - generic [ref=e329]: / Piece
+              - generic [ref=e330]:
+                - generic [ref=e331]: Coffee Table
+                - generic [ref=e333]: 12 Kg
+                - generic [ref=e335]: Powder Coated
+                - generic [ref=e337]: For Restaurant
+              - generic [ref=e339]:
+                - generic [ref=e340]: Kanhiya Lal & Sons
+                - generic [ref=e341]:
+                  - generic [ref=e342]:
+                    - img [ref=e343]
+                    - text: New Delhi
+                  - generic [ref=e346]: GST
+                - generic [ref=e348]: 3 yrs on IndiaMART
+              - generic [ref=e349]:
+                - button "WhatsApp" [ref=e350]:
+                  - img [ref=e351]
+                - button "Contact Supplier" [ref=e353]:
+                  - img [ref=e354]
+                  - text: Contact Supplier
+          - generic [ref=e356] [cursor=pointer]:
+            - generic [ref=e357]:
+              - img "Rectangular Wooden Table (Marble Top)" [ref=e358]
+              - button [ref=e359]:
+                - img [ref=e360]
+            - generic [ref=e362]:
+              - generic [ref=e363]: Rectangular Wooden Table — Marble Top, 5.5 Ft
+              - generic [ref=e364]:
+                - generic [ref=e365]: ₹32,000
+                - generic [ref=e366]: / Piece
+              - generic [ref=e367]:
+                - generic [ref=e368]: Wooden
+                - generic [ref=e370]: 5.5 Feet
+                - generic [ref=e372]: Modern
+                - generic [ref=e374]: Rectangular
+              - generic [ref=e376]:
+                - generic [ref=e377]: Rajdhani Furnitures
+                - generic [ref=e378]:
+                  - generic [ref=e379]:
+                    - img [ref=e380]
+                    - text: New Delhi
+                  - generic [ref=e383]: GST
+                - generic [ref=e385]: 10 yrs on IndiaMART
+              - generic [ref=e386]:
+                - button "WhatsApp" [ref=e387]:
+                  - img [ref=e388]
+                - button "Contact Supplier" [ref=e390]:
+                  - img [ref=e391]
+                  - text: Contact Supplier
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - img [ref=e395]
+            - text: Table Price Range in Delhi
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]: SS 202 Table, 4x2 Ft
+              - generic [ref=e400]: ₹9,000 – ₹11,000
+            - generic [ref=e401]:
+              - generic [ref=e402]: SS 304 Table, 4x2 Ft
+              - generic [ref=e403]: ₹12,150 – ₹14,850
+            - generic [ref=e404]:
+              - generic [ref=e405]: Small Table
+              - generic [ref=e406]: ₹1,080 – ₹1,320
+            - generic [ref=e407]:
+              - generic [ref=e408]: Half Moon Table
+              - generic [ref=e409]: ₹1,980 – ₹2,420
+            - generic [ref=e410]:
+              - generic [ref=e411]: Custom Design Table
+              - generic [ref=e412]: ₹40,500 – ₹55,000
+  - contentinfo [ref=e413]:
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - generic [ref=e416]: IndiaMART
+        - paragraph [ref=e417]: India's largest online B2B marketplace connecting buyers with suppliers. Find quality products from verified manufacturers and exporters.
+      - generic [ref=e418]:
+        - heading "Company" [level=4] [ref=e419]
+        - list [ref=e420]:
+          - listitem [ref=e421]:
+            - link "About Us" [ref=e422] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e423]:
+            - link "Careers" [ref=e424] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e425]:
+            - link "Press" [ref=e426] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e427]:
+            - link "Investor Relations" [ref=e428] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e429]:
+        - heading "Resources" [level=4] [ref=e430]
+        - list [ref=e431]:
+          - listitem [ref=e432]:
+            - link "Sell on IndiaMART" [ref=e433] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e434]:
+            - link "Advertise" [ref=e435] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e436]:
+            - link "Help Center" [ref=e437] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e438]:
+            - link "Blog" [ref=e439] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e440]:
+        - heading "Legal" [level=4] [ref=e441]
+        - list [ref=e442]:
+          - listitem [ref=e443]:
+            - link "Terms of Use" [ref=e444] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e445]:
+            - link "Privacy Policy" [ref=e446] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e447]:
+            - link "Cookie Policy" [ref=e448] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e449]:
+            - link "IPR Policy" [ref=e450] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=e451]:
+      - generic [ref=e452]: IndiaMART InterMESH Ltd. © 1996–2026. All rights reserved.
+      - link "Redesign concept by Abhishek Verma" [ref=e453] [cursor=pointer]:
+        - /url: "#"
+  - button "Switch theme" [ref=e455] [cursor=pointer]:
+    - img [ref=e456]

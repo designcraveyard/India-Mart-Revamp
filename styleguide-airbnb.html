@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb Theme — Design System</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #FF385C;
+  --primary-dark: #E31C5F;
+  --secondary: #00A699;
+  --neutral-900: #222222;
+  --neutral-700: #484848;
+  --neutral-600: #717171;
+  --neutral-400: #B0B0B0;
+  --neutral-300: #DDDDDD;
+  --neutral-200: #EBEBEB;
+  --neutral-100: #F7F7F7;
+  --bg: #FFF8F6;
+  --white: #FFFFFF;
+  --success: #008A05;
+  --error: #C13515;
+  --warning: #E07912;
+  --gold: #FFB400;
+  --font-heading: 'Nunito', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-card: 16px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(255, 56, 92, 0.06);
+  --shadow-md: 0 4px 16px rgba(255, 56, 92, 0.10);
+  --shadow-lg: 0 8px 32px rgba(255, 56, 92, 0.14);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--neutral-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--neutral-200);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+.header-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+}
+.header-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neutral-600);
+  background: var(--neutral-100);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+/* Tab Navigation */
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 12px 48px;
+  background: var(--white);
+  border-bottom: 1px solid var(--neutral-200);
+  position: sticky;
+  top: 73px;
+  z-index: 99;
+  overflow-x: auto;
+}
+.tab {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  color: var(--neutral-600);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.tab:hover { background: var(--neutral-100); color: var(--neutral-900); }
+.tab.active { background: var(--neutral-900); color: var(--white); }
+
+/* Sections */
+.content { max-width: 1200px; margin: 0 auto; padding: 48px; }
+.section { margin-bottom: 64px; }
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--neutral-900);
+  margin-bottom: 8px;
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--neutral-600);
+  margin-bottom: 32px;
+}
+.subsection-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-700);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Color Swatches */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.color-swatch {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+.color-swatch:hover { box-shadow: var(--shadow-md); }
+.color-block {
+  height: 80px;
+  width: 100%;
+}
+.color-info {
+  padding: 12px;
+}
+.color-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+.color-hex {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-family: 'DM Sans', monospace;
+}
+
+/* Typography */
+.type-specimen {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 24px 32px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+.type-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+/* Spacing */
+.spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.spacing-block {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 4px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+.spacing-block:hover { transform: scaleX(1.04); }
+.spacing-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-700);
+  min-width: 60px;
+}
+.spacing-px {
+  font-size: 12px;
+  color: var(--neutral-600);
+}
+
+/* Elevation */
+.elevation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.elevation-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.elevation-card:hover { transform: translateY(-2px); }
+.elevation-card h4 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--neutral-900);
+}
+.elevation-card p {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-family: monospace;
+}
+
+/* Radius */
+.radius-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.radius-example {
+  background: var(--white);
+  border: 2px solid var(--neutral-200);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+}
+.radius-example:hover { border-color: var(--primary); }
+.radius-example .val {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--neutral-900);
+}
+.radius-example .lbl {
+  font-size: 12px;
+  color: var(--neutral-600);
+}
+
+/* Components */
+.component-group {
+  margin-bottom: 40px;
+}
+.component-group h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--neutral-900);
+}
+.component-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #FF385C, #E31C5F);
+  color: white;
+  padding: 14px 28px;
+  border-radius: var(--radius-btn);
+  box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+}
+.btn-primary:hover { box-shadow: 0 6px 20px rgba(255, 56, 92, 0.4); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: var(--neutral-900);
+  padding: 12px 24px;
+  border-radius: var(--radius-btn);
+  border: 2px solid var(--neutral-900);
+}
+.btn-outline:hover { background: var(--neutral-900); color: var(--white); }
+.btn-sm {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: var(--radius-btn);
+}
+
+/* Cards */
+.demo-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  width: 280px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.demo-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.demo-card-img {
+  height: 180px;
+  background: linear-gradient(135deg, #FFE0E6, #FFF0E8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.demo-card-body { padding: 16px; }
+.demo-card-body h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.demo-card-body p {
+  font-size: 14px;
+  color: var(--neutral-600);
+}
+.demo-card-body .price {
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Pills & Badges */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--neutral-300);
+  background: var(--white);
+  color: var(--neutral-700);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pill:hover { border-color: var(--neutral-900); }
+.pill.active { background: var(--neutral-900); color: var(--white); border-color: var(--neutral-900); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.badge-primary { background: #FFE0E6; color: var(--primary); }
+.badge-success { background: #E6F5E6; color: var(--success); }
+.badge-warning { background: #FFF3E0; color: var(--warning); }
+.badge-gold { background: #FFF8E1; color: #B8860B; }
+
+/* Inputs */
+.input-demo {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 14px 16px;
+  border: 2px solid var(--neutral-300);
+  border-radius: var(--radius-btn);
+  background: var(--white);
+  color: var(--neutral-900);
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-demo:focus { border-color: var(--neutral-900); }
+.input-demo::placeholder { color: var(--neutral-400); }
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-200);
+  padding: 8px 8px 8px 24px;
+  width: 480px;
+  max-width: 100%;
+}
+.search-bar input {
+  font-family: var(--font-body);
+  font-size: 15px;
+  border: none;
+  outline: none;
+  flex: 1;
+  color: var(--neutral-900);
+  background: transparent;
+}
+.search-bar input::placeholder { color: var(--neutral-400); }
+.search-bar .search-btn {
+  background: linear-gradient(135deg, #FF385C, #E31C5F);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .header { padding: 16px 24px; }
+  .tabs { padding: 12px 24px; }
+  .content { padding: 32px 24px; }
+  .elevation-grid, .radius-grid { grid-template-columns: 1fr; }
+  .color-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .search-bar { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-title">Airbnb Theme</div>
+  <div class="header-label">Design System</div>
+</div>
+
+<nav class="tabs">
+  <button class="tab active" onclick="scrollToSection('colors')">Colors</button>
+  <button class="tab" onclick="scrollToSection('type')">Type</button>
+  <button class="tab" onclick="scrollToSection('spacing')">Spacing</button>
+  <button class="tab" onclick="scrollToSection('elevation')">Elevation</button>
+  <button class="tab" onclick="scrollToSection('radius')">Radius</button>
+  <button class="tab" onclick="scrollToSection('components')">Components</button>
+</nav>
+
+<div class="content">
+
+  <!-- COLORS -->
+  <section class="section" id="colors">
+    <div class="section-title">Color System</div>
+    <div class="section-desc">Warm, approachable palette centered around coral with teal accents and soft neutrals.</div>
+
+    <div class="subsection-title">Primary</div>
+    <div class="color-grid">
+      <div class="color-swatch"><div class="color-block" style="background:#FF385C"></div><div class="color-info"><div class="color-name">Primary Coral</div><div class="color-hex">#FF385C</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#E31C5F"></div><div class="color-info"><div class="color-name">Primary Dark</div><div class="color-hex">#E31C5F</div></div></div>
+    </div>
+
+    <div class="subsection-title">Secondary</div>
+    <div class="color-grid">
+      <div class="color-swatch"><div class="color-block" style="background:#00A699"></div><div class="color-info"><div class="color-name">Teal</div><div class="color-hex">#00A699</div></div></div>
+    </div>
+
+    <div class="subsection-title">Neutrals</div>
+    <div class="color-grid">
+      <div class="color-swatch"><div class="color-block" style="background:#222222"></div><div class="color-info"><div class="color-name">Neutral 900</div><div class="color-hex">#222222</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#484848"></div><div class="color-info"><div class="color-name">Neutral 700</div><div class="color-hex">#484848</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#717171"></div><div class="color-info"><div class="color-name">Neutral 600</div><div class="color-hex">#717171</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#B0B0B0"></div><div class="color-info"><div class="color-name">Neutral 400</div><div class="color-hex">#B0B0B0</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#DDDDDD"></div><div class="color-info"><div class="color-name">Neutral 300</div><div class="color-hex">#DDDDDD</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#EBEBEB"></div><div class="color-info"><div class="color-name">Neutral 200</div><div class="color-hex">#EBEBEB</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#F7F7F7"></div><div class="color-info"><div class="color-name">Neutral 100</div><div class="color-hex">#F7F7F7</div></div></div>
+    </div>
+
+    <div class="subsection-title">Semantic</div>
+    <div class="color-grid">
+      <div class="color-swatch"><div class="color-block" style="background:#008A05"></div><div class="color-info"><div class="color-name">Success</div><div class="color-hex">#008A05</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#C13515"></div><div class="color-info"><div class="color-name">Error</div><div class="color-hex">#C13515</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#E07912"></div><div class="color-info"><div class="color-name">Warning</div><div class="color-hex">#E07912</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#FFB400"></div><div class="color-info"><div class="color-name">Gold</div><div class="color-hex">#FFB400</div></div></div>
+    </div>
+
+    <div class="subsection-title">Background</div>
+    <div class="color-grid">
+      <div class="color-swatch"><div class="color-block" style="background:#FFF8F6; border: 1px solid #EBEBEB;"></div><div class="color-info"><div class="color-name">Background</div><div class="color-hex">#FFF8F6</div></div></div>
+      <div class="color-swatch"><div class="color-block" style="background:#FFFFFF; border: 1px solid #EBEBEB;"></div><div class="color-info"><div class="color-name">White</div><div class="color-hex">#FFFFFF</div></div></div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section class="section" id="type">
+    <div class="section-title">Typography</div>
+    <div class="section-desc">Nunito for headings brings warmth and friendliness. DM Sans for body text ensures clean readability.</div>
+
+    <div class="type-specimen">
+      <span class="type-label">H1 / 36px / 800</span>
+      <span style="font-family:var(--font-heading);font-size:36px;font-weight:800;color:var(--neutral-900);">Find places to stay</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">H2 / 28px / 700</span>
+      <span style="font-family:var(--font-heading);font-size:28px;font-weight:700;color:var(--neutral-900);">Explore nearby</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">H3 / 22px / 700</span>
+      <span style="font-family:var(--font-heading);font-size:22px;font-weight:700;color:var(--neutral-900);">Entire villa in Bali</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">H4 / 18px / 600</span>
+      <span style="font-family:var(--font-heading);font-size:18px;font-weight:600;color:var(--neutral-700);">Popular experiences</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">Body / 15px / 400</span>
+      <span style="font-family:var(--font-body);font-size:15px;font-weight:400;color:var(--neutral-700);">Spacious apartment with ocean views, located 5 minutes from the beach. Perfect for families.</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">Caption / 13px / 500</span>
+      <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:var(--neutral-600);">4.92 (128 reviews) &middot; Superhost</span>
+    </div>
+    <div class="type-specimen">
+      <span class="type-label">Overline / 11px / 600</span>
+      <span style="font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--neutral-400);">Sponsored listing</span>
+    </div>
+  </section>
+
+  <!-- SPACING -->
+  <section class="section" id="spacing">
+    <div class="section-title">Spacing Scale</div>
+    <div class="section-desc">8-point grid system with half-step at 4px for tight adjustments.</div>
+
+    <div class="spacing-row"><span class="spacing-label">4px</span><div class="spacing-block" style="width:4px"></div><span class="spacing-px">0.25rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">8px</span><div class="spacing-block" style="width:32px"></div><span class="spacing-px">0.5rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">12px</span><div class="spacing-block" style="width:48px"></div><span class="spacing-px">0.75rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">16px</span><div class="spacing-block" style="width:64px"></div><span class="spacing-px">1rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">24px</span><div class="spacing-block" style="width:96px"></div><span class="spacing-px">1.5rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">32px</span><div class="spacing-block" style="width:128px"></div><span class="spacing-px">2rem</span></div>
+    <div class="spacing-row"><span class="spacing-label">48px</span><div class="spacing-block" style="width:192px"></div><span class="spacing-px">3rem</span></div>
+  </section>
+
+  <!-- ELEVATION -->
+  <section class="section" id="elevation">
+    <div class="section-title">Elevation</div>
+    <div class="section-desc">Three shadow depths using warm, pink-tinted shadows for a soft, inviting feel.</div>
+
+    <div class="elevation-grid">
+      <div class="elevation-card" style="box-shadow: var(--shadow-sm);">
+        <h4>Soft</h4>
+        <p>0 2px 8px rgba(255,56,92,0.06)</p>
+      </div>
+      <div class="elevation-card" style="box-shadow: var(--shadow-md);">
+        <h4>Medium</h4>
+        <p>0 4px 16px rgba(255,56,92,0.10)</p>
+      </div>
+      <div class="elevation-card" style="box-shadow: var(--shadow-lg);">
+        <h4>Large</h4>
+        <p>0 8px 32px rgba(255,56,92,0.14)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BORDER RADIUS -->
+  <section class="section" id="radius">
+    <div class="section-title">Border Radius</div>
+    <div class="section-desc">Generous rounding throughout for a friendly, approachable aesthetic.</div>
+
+    <div class="radius-grid">
+      <div class="radius-example" style="border-radius:16px;">
+        <span class="val">16px</span>
+        <span class="lbl">Cards</span>
+      </div>
+      <div class="radius-example" style="border-radius:12px;">
+        <span class="val">12px</span>
+        <span class="lbl">Buttons &amp; Inputs</span>
+      </div>
+      <div class="radius-example" style="border-radius:999px;">
+        <span class="val">999px</span>
+        <span class="lbl">Pills &amp; Badges</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section class="section" id="components">
+    <div class="section-title">Components</div>
+    <div class="section-desc">Core UI building blocks using the Airbnb theme tokens.</div>
+
+    <div class="component-group">
+      <h3>Buttons</h3>
+      <div class="component-row">
+        <button class="btn btn-primary">Book Now</button>
+        <button class="btn btn-primary btn-sm">Save</button>
+        <button class="btn btn-outline">Show Map</button>
+        <button class="btn btn-outline btn-sm">Filters</button>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <h3>Search Bar</h3>
+      <div class="component-row">
+        <div class="search-bar">
+          <input type="text" placeholder="Search destinations...">
+          <button class="search-btn">&#8981;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <h3>Cards</h3>
+      <div class="component-row" style="align-items:flex-start;">
+        <div class="demo-card">
+          <div class="demo-card-img">&#127968;</div>
+          <div class="demo-card-body">
+            <h4>Cozy Beach House</h4>
+            <p>Goa, India &middot; 4.95 rating</p>
+            <p class="price">&#8377;8,500 <span style="font-weight:400;color:var(--neutral-600);">/ night</span></p>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-img" style="background: linear-gradient(135deg, #E0F7F5, #FFF0E8);">&#127796;</div>
+          <div class="demo-card-body">
+            <h4>Mountain Retreat</h4>
+            <p>Manali, India &middot; 4.88 rating</p>
+            <p class="price">&#8377;5,200 <span style="font-weight:400;color:var(--neutral-600);">/ night</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <h3>Pills &amp; Filters</h3>
+      <div class="component-row">
+        <span class="pill active">Entire place</span>
+        <span class="pill">Private room</span>
+        <span class="pill">Shared room</span>
+        <span class="pill">Beachfront</span>
+        <span class="pill">Pool</span>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <h3>Badges</h3>
+      <div class="component-row">
+        <span class="badge badge-primary">Superhost</span>
+        <span class="badge badge-success">Verified</span>
+        <span class="badge badge-warning">Rare Find</span>
+        <span class="badge badge-gold">Guest Favourite</span>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <h3>Inputs</h3>
+      <div class="component-row">
+        <input class="input-demo" type="text" placeholder="Where are you going?">
+        <input class="input-demo" type="text" value="Dec 15 - Dec 22" style="border-color: var(--neutral-900);">
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Update active tab on scroll
+const sections = ['colors', 'type', 'spacing', 'elevation', 'radius', 'components'];
+window.addEventListener('scroll', () => {
+  const tabs = document.querySelectorAll('.tab');
+  let current = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < 200) current = i;
+  });
+  tabs.forEach(t => t.classList.remove('active'));
+  tabs[current].classList.add('active');
+});
+</script>
+
+</body>
+</html>

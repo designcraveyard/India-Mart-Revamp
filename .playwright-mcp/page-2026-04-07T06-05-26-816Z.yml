@@ -1,0 +1,722 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications alt+T"
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - generic [ref=e6]: IM
+          - generic [ref=e7]:
+            - heading "IndiaMART" [level=1] [ref=e8]
+            - paragraph [ref=e9]: Design System
+        - navigation [ref=e10]:
+          - generic [ref=e11]:
+            - button "Colors" [ref=e12] [cursor=pointer]:
+              - img [ref=e13]
+              - generic [ref=e19]: Colors
+            - button "Type" [ref=e20] [cursor=pointer]:
+              - img [ref=e21]
+              - generic [ref=e23]: Type
+            - button "Spacing" [ref=e24] [cursor=pointer]:
+              - img [ref=e25]
+              - generic [ref=e28]: Spacing
+            - button "Elevation" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+              - generic [ref=e34]: Elevation
+            - button "Components" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+              - generic [ref=e41]: Components
+            - button "Icons" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+              - generic [ref=e47]: Icons
+            - button "Patterns" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+              - generic [ref=e53]: Patterns
+            - button "Pages" [ref=e54] [cursor=pointer]:
+              - img [ref=e55]
+              - generic [ref=e58]: Pages
+            - button "Layout" [ref=e59] [cursor=pointer]:
+              - img [ref=e60]
+              - generic [ref=e65]: Layout
+      - generic [ref=e67]:
+        - heading "Style Guide v1.0" [level=2] [ref=e68]
+        - paragraph [ref=e69]: Comprehensive design system for IndiaMART's desktop platform. Defines colors, typography, components, layout grids, and micro-patterns for consistent, scalable B2B experiences.
+      - main [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: "01"
+              - heading "Color System" [level=2] [ref=e75]
+            - paragraph [ref=e76]: Core palette and functional usage of color across the interface.
+          - generic [ref=e77]:
+            - heading "Primary Teal" [level=3] [ref=e78]
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - generic [ref=e82]: Primary
+                - generic [ref=e83]: "#1d8480"
+                - generic [ref=e84]: "--primary"
+              - generic [ref=e85]:
+                - generic [ref=e87]: Primary Light
+                - generic [ref=e88]: hsl(178,45%,85%)
+                - generic [ref=e89]: "--primary-light"
+              - generic [ref=e90]:
+                - generic [ref=e92]: Primary Hover
+                - generic [ref=e93]: hsl(178,63%,25%)
+                - generic [ref=e94]: "--primary-hover"
+              - generic [ref=e95]:
+                - generic [ref=e97]: Primary Active
+                - generic [ref=e98]: hsl(178,63%,20%)
+                - generic [ref=e99]: "--primary-active"
+              - generic [ref=e100]:
+                - generic [ref=e102]: Primary Disabled
+                - generic [ref=e103]: hsl(178,20%,70%)
+                - generic [ref=e104]: "--primary-disabled"
+          - generic [ref=e105]:
+            - heading "Secondary / Accent Indigo" [level=3] [ref=e106]
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - generic [ref=e110]: Secondary
+                - generic [ref=e111]: "#2e3192"
+                - generic [ref=e112]: "--secondary"
+              - generic [ref=e113]:
+                - generic [ref=e115]: Secondary Hover
+                - generic [ref=e116]: hsl(239,52%,32%)
+                - generic [ref=e117]: "--secondary-hover"
+              - generic [ref=e118]:
+                - generic [ref=e120]: Secondary Light
+                - generic [ref=e121]: hsl(239,40%,92%)
+                - generic [ref=e122]: "--secondary-light"
+          - generic [ref=e123]:
+            - heading "Neutral Scale" [level=3] [ref=e124]
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e128]: Neutral 900
+                - generic [ref=e129]: hsl(220,14%,10%)
+                - generic [ref=e130]: "--neutral-900"
+              - generic [ref=e131]:
+                - generic [ref=e133]: Neutral 700
+                - generic [ref=e134]: hsl(220,8%,35%)
+                - generic [ref=e135]: "--neutral-700"
+              - generic [ref=e136]:
+                - generic [ref=e138]: Neutral 600
+                - generic [ref=e139]: hsl(220,6%,46%)
+                - generic [ref=e140]: "--neutral-600"
+              - generic [ref=e141]:
+                - generic [ref=e143]: Neutral 400
+                - generic [ref=e144]: hsl(220,8%,72%)
+                - generic [ref=e145]: "--neutral-400"
+              - generic [ref=e146]:
+                - generic [ref=e148]: Neutral 300
+                - generic [ref=e149]: hsl(220,10%,84%)
+                - generic [ref=e150]: "--neutral-300"
+              - generic [ref=e151]:
+                - generic [ref=e153]: Neutral 200
+                - generic [ref=e154]: hsl(220,14%,92%)
+                - generic [ref=e155]: "--neutral-200"
+              - generic [ref=e156]:
+                - generic [ref=e158]: Neutral 100
+                - generic [ref=e159]: hsl(220,20%,97%)
+                - generic [ref=e160]: "--neutral-100"
+          - generic [ref=e161]:
+            - heading "Semantic Colors" [level=3] [ref=e162]
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e166]: Success
+                - generic [ref=e167]: "#1a9e56"
+                - generic [ref=e168]: "--success"
+              - generic [ref=e169]:
+                - generic [ref=e171]: Error
+                - generic [ref=e172]: "#dc3545"
+                - generic [ref=e173]: "--destructive"
+              - generic [ref=e174]:
+                - generic [ref=e176]: Warning
+                - generic [ref=e177]: "#e89c0c"
+                - generic [ref=e178]: "--warning"
+              - generic [ref=e179]:
+                - generic [ref=e181]: Info
+                - generic [ref=e182]: "#2483d4"
+                - generic [ref=e183]: "--info"
+          - generic [ref=e184]:
+            - heading "Surface Colors" [level=3] [ref=e185]
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - generic [ref=e189]: Background
+                - generic [ref=e190]: hsl(220,20%,97%)
+                - generic [ref=e191]: "--background"
+              - generic [ref=e192]:
+                - generic [ref=e194]: Card
+                - generic [ref=e195]: "#ffffff"
+                - generic [ref=e196]: "--card"
+              - generic [ref=e197]:
+                - generic [ref=e199]: Border
+                - generic [ref=e200]: hsl(220,10%,84%)
+                - generic [ref=e201]: "--border"
+              - generic [ref=e202]:
+                - generic [ref=e204]: Dark
+                - generic [ref=e205]: "#0f172a"
+                - generic [ref=e206]: "--dark"
+          - generic [ref=e207]:
+            - heading "Usage Guidelines" [level=3] [ref=e208]
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - heading "Primary Teal" [level=4] [ref=e211]
+                - list [ref=e212]:
+                  - listitem [ref=e213]: • Main CTAs (Call Supplier, Send Inquiry)
+                  - listitem [ref=e214]: • Active navigation states
+                  - listitem [ref=e215]: • Interactive links
+                  - listitem [ref=e216]: Never use as large area fill
+              - generic [ref=e217]:
+                - heading "Secondary Indigo" [level=4] [ref=e218]
+                - list [ref=e219]:
+                  - listitem [ref=e220]: • "Post Your Requirement" CTAs
+                  - listitem [ref=e221]: • Urgency indicators
+                  - listitem [ref=e222]: • Visual hierarchy distinction
+              - generic [ref=e223]:
+                - heading "Neutrals" [level=4] [ref=e224]
+                - list [ref=e225]:
+                  - listitem [ref=e226]: • 900 for headings
+                  - listitem [ref=e227]: • 700 for body text
+                  - listitem [ref=e228]: • 600 for captions/specs
+                  - listitem [ref=e229]: • 400 for placeholders
+                  - listitem [ref=e230]: • 300 borders, 200 hover, 100 bg
+              - generic [ref=e231]:
+                - heading "Semantic Colors" [level=4] [ref=e232]
+                - list [ref=e233]:
+                  - listitem [ref=e234]: • Green = Verified / Success
+                  - listitem [ref=e235]: • Red = Error
+                  - listitem [ref=e236]: • Amber = Warning
+                  - listitem [ref=e237]: • Blue = Info
+        - generic [ref=e238]:
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: "02"
+              - heading "Typography" [level=2] [ref=e242]
+            - paragraph [ref=e243]: Font families, weights, and hierarchies for readability and consistency on desktop screens.
+          - generic [ref=e244]:
+            - 'heading "Typeface: Inter" [level=3] [ref=e245]'
+            - paragraph [ref=e246]: Inter is chosen for its excellent readability at all sizes, comprehensive weight options, and open-source availability. If Inter is not available, Arial is used as the default fallback.
+            - paragraph [ref=e247]: Aa Bb Cc
+            - paragraph [ref=e248]: ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789
+          - generic [ref=e249]:
+            - heading "Font Weights" [level=3] [ref=e250]
+            - generic [ref=e251]:
+              - generic [ref=e252]: "100"
+              - generic [ref=e253]: Thin
+              - generic [ref=e254]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e255]:
+              - generic [ref=e256]: "300"
+              - generic [ref=e257]: Light
+              - generic [ref=e258]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e259]:
+              - generic [ref=e260]: "400"
+              - generic [ref=e261]: Regular
+              - generic [ref=e262]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e263]:
+              - generic [ref=e264]: "500"
+              - generic [ref=e265]: Medium
+              - generic [ref=e266]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e267]:
+              - generic [ref=e268]: "600"
+              - generic [ref=e269]: SemiBold
+              - generic [ref=e270]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e271]:
+              - generic [ref=e272]: "700"
+              - generic [ref=e273]: Bold
+              - generic [ref=e274]: The quick brown fox jumps over the lazy dog
+            - generic [ref=e275]:
+              - generic [ref=e276]: "900"
+              - generic [ref=e277]: Black
+              - generic [ref=e278]: The quick brown fox jumps over the lazy dog
+          - generic [ref=e279]:
+            - heading "Typography Scale" [level=3] [ref=e280]
+            - generic [ref=e281]:
+              - generic [ref=e282]:
+                - text: text-2xl / 24px
+                - paragraph [ref=e283]: H1 — Product
+              - paragraph [ref=e284]: Industrial Water Pump 500HP
+            - generic [ref=e285]:
+              - generic [ref=e286]:
+                - text: text-xl / 20px
+                - paragraph [ref=e287]: H2 — Section
+              - paragraph [ref=e288]: Product Specifications
+            - generic [ref=e289]:
+              - generic [ref=e290]:
+                - text: text-base / 16px
+                - paragraph [ref=e291]: H3 — Subsection
+              - paragraph [ref=e292]: Technical Details
+            - generic [ref=e293]:
+              - generic [ref=e294]:
+                - text: text-xs / 12px
+                - paragraph [ref=e295]: H4 — Card Title
+              - paragraph [ref=e296]: Price & Availability
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - text: text-base / 16px
+                - paragraph [ref=e299]: Body
+              - paragraph [ref=e300]: High-performance industrial pump suitable for commercial and residential applications with energy-efficient motor.
+            - generic [ref=e301]:
+              - generic [ref=e302]:
+                - text: text-sm / 14px
+                - paragraph [ref=e303]: Body Small
+              - paragraph [ref=e304]: Specifications are subject to change without notice. Please verify with the supplier.
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - text: text-xs / 12px
+                - paragraph [ref=e307]: Caption
+              - paragraph [ref=e308]: "Last updated: 15 Jan 2026 • MOQ: 10 units"
+            - generic [ref=e309]:
+              - generic [ref=e310]:
+                - text: text-[10px] / 10px
+                - paragraph [ref=e311]: Small Caption
+              - paragraph [ref=e312]: Terms & conditions apply. Prices exclusive of GST.
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - text: text-[8px] / 8px
+                - paragraph [ref=e315]: Micro
+              - paragraph [ref=e316]: v1.0.2 • Internal reference only
+            - generic [ref=e317]:
+              - generic [ref=e318]:
+                - text: text-[22px] / 22px
+                - paragraph [ref=e319]: Sub-heading
+              - paragraph [ref=e320]: Supplier Verified Products
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - text: text-xs uppercase
+                - paragraph [ref=e323]: Overline
+              - paragraph [ref=e324]: Best Value
+        - generic [ref=e325]:
+          - generic [ref=e326]:
+            - generic [ref=e327]:
+              - generic [ref=e328]: "03"
+              - 'heading "UI Components: Buttons" [level=2] [ref=e329]'
+            - paragraph [ref=e330]: Interactive elements for user actions with variants, sizes, and states.
+          - generic [ref=e331]:
+            - heading "Button Variants" [level=3] [ref=e332]
+            - generic [ref=e333]:
+              - button "Primary Action" [ref=e334] [cursor=pointer]
+              - button "Secondary Action" [ref=e335] [cursor=pointer]
+              - button "Outline Primary" [ref=e336] [cursor=pointer]
+              - button "Outline Secondary" [ref=e337] [cursor=pointer]
+              - button "Ghost Button" [ref=e338] [cursor=pointer]
+              - button "Destructive" [ref=e339] [cursor=pointer]
+              - button "Link Button" [ref=e340] [cursor=pointer]
+            - heading "Button Sizes" [level=3] [ref=e341]
+            - generic [ref=e342]:
+              - generic [ref=e343]:
+                - button "Large Button" [ref=e344] [cursor=pointer]
+                - paragraph [ref=e345]: 48px / 16px text
+              - generic [ref=e346]:
+                - button "Medium Button" [ref=e347] [cursor=pointer]
+                - paragraph [ref=e348]: 42px / 14px text
+              - generic [ref=e349]:
+                - button "Small Button" [ref=e350] [cursor=pointer]
+                - paragraph [ref=e351]: 32px / 12px text
+              - generic [ref=e352]:
+                - button "Large Button" [ref=e353] [cursor=pointer]
+                - paragraph [ref=e354]: 48px / 16px text
+              - generic [ref=e355]:
+                - button "Medium Button" [ref=e356] [cursor=pointer]
+                - paragraph [ref=e357]: 42px / 14px text
+              - generic [ref=e358]:
+                - button "Small Button" [ref=e359] [cursor=pointer]
+                - paragraph [ref=e360]: 32px / 12px text
+            - heading "Primary vs Secondary" [level=3] [ref=e361]
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - button "Call Supplier" [ref=e364] [cursor=pointer]
+                - paragraph [ref=e365]: Primary Teal
+              - generic [ref=e366]:
+                - button "Post Requirement" [ref=e367] [cursor=pointer]
+                - paragraph [ref=e368]: Secondary Indigo
+              - generic [ref=e369]:
+                - button "Outline Primary" [ref=e370] [cursor=pointer]
+                - paragraph [ref=e371]: Teal Outline
+              - generic [ref=e372]:
+                - button "Outline Secondary" [ref=e373] [cursor=pointer]
+                - paragraph [ref=e374]: Indigo Outline
+            - heading "Button States" [level=3] [ref=e375]
+            - generic [ref=e376]:
+              - generic [ref=e377]:
+                - button "Enabled" [ref=e378] [cursor=pointer]
+                - paragraph [ref=e379]: Default
+              - generic [ref=e380]:
+                - button "Enabled" [ref=e381] [cursor=pointer]
+                - paragraph [ref=e382]: Secondary
+              - generic [ref=e383]:
+                - button "Disabled" [disabled]
+                - paragraph [ref=e384]: Disabled
+            - generic [ref=e385]:
+              - heading "Shape Properties" [level=4] [ref=e386]
+              - paragraph [ref=e387]: "Corner radius: 8px (rounded-lg) for all button variants."
+        - generic [ref=e388]:
+          - generic [ref=e389]:
+            - generic [ref=e390]:
+              - generic [ref=e391]: "04"
+              - 'heading "UI Components: Forms & Inputs" [level=2] [ref=e392]'
+            - paragraph [ref=e393]: Standardized data entry points with validation and state management.
+          - generic [ref=e394]:
+            - heading "Text Field States" [level=3] [ref=e395]
+            - generic [ref=e396]:
+              - generic [ref=e397]:
+                - generic [ref=e398]: Normal
+                - textbox "Enter product name" [ref=e399]
+              - generic [ref=e400]:
+                - generic [ref=e401]: Hover
+                - textbox "Enter product name" [ref=e402]
+              - generic [ref=e403]:
+                - generic [ref=e404]: Active / Focus
+                - textbox [ref=e405]: Industrial Water Pump
+              - generic [ref=e406]:
+                - generic [ref=e407]: Disabled
+                - textbox "Not editable" [disabled] [ref=e408]
+            - heading "Validation States" [level=3] [ref=e409]
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - generic [ref=e412]: Success
+                - textbox [ref=e413]: valid@email.com
+                - paragraph [ref=e414]:
+                  - generic [ref=e415]: ✓
+                  - text: Email is valid
+              - generic [ref=e416]:
+                - generic [ref=e417]: Error
+                - textbox [ref=e418]: invalid-email
+                - paragraph [ref=e419]:
+                  - generic [ref=e420]: ✕
+                  - text: Please enter a valid email address
+              - generic [ref=e421]:
+                - generic [ref=e423]: Please enter Mobile number
+                - generic [ref=e425]:
+                  - generic [ref=e426]: "+91"
+                  - textbox "Enter your mobile" [ref=e427]
+            - heading "Text Area" [level=3] [ref=e428]
+            - generic [ref=e429]:
+              - generic [ref=e430]: Product Description *(Required)
+              - textbox "Describe your product in detail..." [ref=e431]
+            - heading "Dropdown / Select Menu" [level=3] [ref=e432]
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - generic [ref=e435]: Normal
+                - generic [ref=e436]:
+                  - generic [ref=e437]: Select category
+                  - generic [ref=e438]: ▾
+              - generic [ref=e439]:
+                - generic [ref=e440]: Active (Open)
+                - generic [ref=e441]:
+                  - generic [ref=e442]: Select category
+                  - generic [ref=e443]: ▴
+                - generic [ref=e444]:
+                  - generic [ref=e445] [cursor=pointer]: Electronics
+                  - generic [ref=e446] [cursor=pointer]: Machinery
+                  - generic [ref=e447] [cursor=pointer]: Textiles
+              - generic [ref=e448]:
+                - generic [ref=e449]: Selected
+                - generic [ref=e450]:
+                  - generic [ref=e451]: Electronics
+                  - generic [ref=e452]: ▾
+        - generic [ref=e453]:
+          - generic [ref=e454]:
+            - generic [ref=e455]:
+              - generic [ref=e456]: "05"
+              - heading "Visual Effects & Styles" [level=2] [ref=e457]
+            - paragraph [ref=e458]: Depth, elevation, and shape consistencies on desktop screens.
+          - generic [ref=e459]:
+            - heading "Shadows / Elevation" [level=3] [ref=e460]
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - generic [ref=e464]: Depth 1 — Subtle
+                - paragraph [ref=e465]: 0 1px 3px 0 rgba(30,42,58,0.06)
+              - generic [ref=e466]:
+                - generic [ref=e468]: Depth 2 — Prominent
+                - paragraph [ref=e469]: 0 4px 12px -2px rgba(30,42,58,0.08)
+              - generic [ref=e470]:
+                - generic [ref=e472]: Depth 3 — Modal
+                - paragraph [ref=e473]: 0 12px 32px -4px rgba(30,42,58,0.12)
+          - generic [ref=e474]:
+            - heading "Building Blocks (Cards)" [level=3] [ref=e475]
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - heading "Outlined Card" [level=4] [ref=e478]
+                - generic [ref=e479]:
+                  - heading "Industrial Motor 250W" [level=5] [ref=e480]
+                  - paragraph [ref=e481]: High efficiency, low noise operation
+                  - text: ₹12,500
+              - generic [ref=e482]:
+                - heading "Elevated Card" [level=4] [ref=e483]
+                - generic [ref=e484]:
+                  - heading "Industrial Motor 250W" [level=5] [ref=e485]
+                  - paragraph [ref=e486]: High efficiency, low noise operation
+                  - text: ₹12,500
+            - paragraph [ref=e488]: "Corner Radius: 12px (rounded-xl) for all cards and containers. Background: White."
+        - generic [ref=e489]:
+          - generic [ref=e490]:
+            - generic [ref=e491]:
+              - generic [ref=e492]: "06"
+              - heading "Iconography" [level=2] [ref=e493]
+            - paragraph [ref=e494]: Graphical language, sizing hierarchy, and technical guidelines.
+          - generic [ref=e495]:
+            - heading "Icon Set" [level=3] [ref=e496]
+            - paragraph [ref=e497]: SVG-based, tree-shakable icon library with consistent 24px grid alignment.
+            - heading "Common Icons (Line Style — Inactive)" [level=4] [ref=e498]
+            - generic [ref=e499]:
+              - generic [ref=e500]:
+                - img [ref=e502]
+                - generic [ref=e505]: Home
+              - generic [ref=e506]:
+                - img [ref=e508]
+                - generic [ref=e511]: Search
+              - generic [ref=e512]:
+                - img [ref=e514]
+                - generic [ref=e518]: Cart
+              - generic [ref=e519]:
+                - img [ref=e521]
+                - generic [ref=e524]: User
+              - generic [ref=e525]:
+                - img [ref=e527]
+                - generic [ref=e529]: Rating
+              - generic [ref=e530]:
+                - img [ref=e532]
+                - generic [ref=e534]: Wishlist
+              - generic [ref=e535]:
+                - img [ref=e537]
+                - generic [ref=e540]: Alerts
+              - generic [ref=e541]:
+                - img [ref=e543]
+                - generic [ref=e546]: Settings
+              - generic [ref=e547]:
+                - img [ref=e549]
+                - generic [ref=e551]: Navigate
+              - generic [ref=e552]:
+                - img [ref=e554]
+                - generic [ref=e558]: Product
+              - generic [ref=e559]:
+                - img [ref=e561]
+                - generic [ref=e566]: Delivery
+              - generic [ref=e567]:
+                - img [ref=e569]
+                - generic [ref=e571]: Verified
+              - generic [ref=e572]:
+                - img [ref=e574]
+                - generic [ref=e577]: View
+              - generic [ref=e578]:
+                - img [ref=e580]
+                - generic [ref=e583]: Download
+              - generic [ref=e584]:
+                - img [ref=e586]
+                - generic [ref=e592]: Share
+              - generic [ref=e593]:
+                - img [ref=e595]
+                - generic [ref=e597]: Filter
+            - heading "Location Icons" [level=4] [ref=e598]
+            - generic [ref=e599]:
+              - generic [ref=e600]:
+                - img [ref=e602]
+                - generic [ref=e605]: Location (Green)
+              - generic [ref=e606]:
+                - img [ref=e608]
+                - generic [ref=e611]: Location (Black)
+            - heading "Filled Style — Active / Selected" [level=4] [ref=e612]
+            - generic [ref=e613]:
+              - generic [ref=e614]:
+                - img [ref=e616]
+                - generic [ref=e618]: Active
+              - generic [ref=e619]:
+                - img [ref=e621]
+                - generic [ref=e623]: Liked
+              - generic [ref=e624]:
+                - img [ref=e626]
+                - generic [ref=e628]: Done
+              - generic [ref=e629]:
+                - img [ref=e631]
+                - generic [ref=e633]: Warn
+              - generic [ref=e634]:
+                - img [ref=e636]
+                - generic [ref=e639]: Close
+              - generic [ref=e640]:
+                - img [ref=e642]
+                - generic [ref=e644]: Info
+            - heading "Sizing Hierarchy" [level=3] [ref=e645]
+            - generic [ref=e646]:
+              - generic [ref=e647]:
+                - img [ref=e649]
+                - paragraph [ref=e653]: Micro — 8px
+                - paragraph [ref=e654]: Inline indicators
+              - generic [ref=e655]:
+                - img [ref=e657]
+                - paragraph [ref=e661]: Small — 16px
+                - paragraph [ref=e662]: Lists, toolbars
+              - generic [ref=e663]:
+                - img [ref=e665]
+                - paragraph [ref=e669]: Default — 24px
+                - paragraph [ref=e670]: Navigation, actions
+              - generic [ref=e671]:
+                - img [ref=e673]
+                - paragraph [ref=e677]: Medium — 32px
+                - paragraph [ref=e678]: Buttons, CTAs
+              - generic [ref=e679]:
+                - img [ref=e681]
+                - paragraph [ref=e685]: Large — 64px
+                - paragraph [ref=e686]: Hero, banners
+        - generic [ref=e687]:
+          - generic [ref=e688]:
+            - generic [ref=e689]:
+              - generic [ref=e690]: "07"
+              - heading "Layout & Grid System" [level=2] [ref=e691]
+            - paragraph [ref=e692]: Structural framework for organizing content on desktop screens.
+          - generic [ref=e693]:
+            - heading "12-Column Grid" [level=3] [ref=e694]
+            - paragraph [ref=e695]: 24px gutters, 32px margins. Fluid grid adapts to 1024px – 1920px viewports.
+            - generic [ref=e696]:
+              - generic [ref=e697]:
+                - generic [ref=e699]: "1"
+                - generic [ref=e701]: "2"
+                - generic [ref=e703]: "3"
+                - generic [ref=e705]: "4"
+                - generic [ref=e707]: "5"
+                - generic [ref=e709]: "6"
+                - generic [ref=e711]: "7"
+                - generic [ref=e713]: "8"
+                - generic [ref=e715]: "9"
+                - generic [ref=e717]: "10"
+                - generic [ref=e719]: "11"
+                - generic [ref=e721]: "12"
+              - paragraph [ref=e722]: 12 columns • 24px gutters
+            - heading "Common Layouts" [level=4] [ref=e723]
+            - generic [ref=e724]:
+              - generic [ref=e725]:
+                - paragraph [ref=e726]: Full Width (12 cols)
+                - generic [ref=e728]: "12"
+              - generic [ref=e729]:
+                - paragraph [ref=e730]: Sidebar + Content (3 + 9)
+                - generic [ref=e731]:
+                  - generic [ref=e732]: "3"
+                  - generic [ref=e733]: "9"
+              - generic [ref=e734]:
+                - paragraph [ref=e735]: Product Grid (3 + 3 + 3 + 3)
+                - generic [ref=e736]:
+                  - generic [ref=e737]: "3"
+                  - generic [ref=e738]: "3"
+                  - generic [ref=e739]: "3"
+                  - generic [ref=e740]: "3"
+          - generic [ref=e741]:
+            - heading "Responsive Breakpoints" [level=3] [ref=e742]
+            - table [ref=e744]:
+              - rowgroup [ref=e745]:
+                - row "Device Width Columns Gutters Margins" [ref=e746]:
+                  - columnheader "Device" [ref=e747]
+                  - columnheader "Width" [ref=e748]
+                  - columnheader "Columns" [ref=e749]
+                  - columnheader "Gutters" [ref=e750]
+                  - columnheader "Margins" [ref=e751]
+              - rowgroup [ref=e752]:
+                - row "Medium Desktop 1024px 12 16px 24px" [ref=e753]:
+                  - cell "Medium Desktop" [ref=e754]
+                  - cell "1024px" [ref=e755]
+                  - cell "12" [ref=e756]
+                  - cell "16px" [ref=e757]
+                  - cell "24px" [ref=e758]
+                - row "Standard Desktop 1280px 12 24px 32px" [ref=e759]:
+                  - cell "Standard Desktop" [ref=e760]
+                  - cell "1280px" [ref=e761]
+                  - cell "12" [ref=e762]
+                  - cell "24px" [ref=e763]
+                  - cell "32px" [ref=e764]
+                - row "Large Desktop 1366px 12 24px 32px" [ref=e765]:
+                  - cell "Large Desktop" [ref=e766]
+                  - cell "1366px" [ref=e767]
+                  - cell "12" [ref=e768]
+                  - cell "24px" [ref=e769]
+                  - cell "32px" [ref=e770]
+                - row "XL Desktop 1920px 12 24px 32px" [ref=e771]:
+                  - cell "XL Desktop" [ref=e772]
+                  - cell "1920px" [ref=e773]
+                  - cell "12" [ref=e774]
+                  - cell "24px" [ref=e775]
+                  - cell "32px" [ref=e776]
+        - generic [ref=e777]:
+          - generic [ref=e778]:
+            - generic [ref=e779]:
+              - generic [ref=e780]: "08"
+              - heading "Spacing & Layout System" [level=2] [ref=e781]
+            - paragraph [ref=e782]: Base spacing rules built on an 8pt grid for desktop experiences.
+          - generic [ref=e783]:
+            - 'heading "Spacing Scale (Base: 8pt)" [level=3] [ref=e784]'
+            - generic [ref=e785]:
+              - generic [ref=e786]:
+                - generic [ref=e787]: 2px
+                - generic [ref=e790]: Hairline gaps, borders
+              - generic [ref=e791]:
+                - generic [ref=e792]: 4px
+                - generic [ref=e795]: Tight spacing, inline elements
+              - generic [ref=e796]:
+                - generic [ref=e797]: 8px
+                - generic [ref=e800]: Icon gaps, compact lists
+              - generic [ref=e801]:
+                - generic [ref=e802]: 16px
+                - generic [ref=e805]: Card padding, form gaps
+              - generic [ref=e806]:
+                - generic [ref=e807]: 24px
+                - generic [ref=e810]: Section inner padding
+              - generic [ref=e811]:
+                - generic [ref=e812]: 32px
+                - generic [ref=e815]: Between related sections
+          - generic [ref=e816]:
+            - heading "Application Rules" [level=3] [ref=e817]
+            - generic [ref=e818]:
+              - generic [ref=e819]:
+                - heading "Card Padding" [level=4] [ref=e820]
+                - paragraph [ref=e821]: Use 16px internal padding for content clarity.
+              - generic [ref=e822]:
+                - heading "Section Spacing" [level=4] [ref=e823]
+                - paragraph [ref=e824]: Use 48pt between heavy content sections.
+              - generic [ref=e825]:
+                - heading "Element Margins" [level=4] [ref=e826]
+                - paragraph [ref=e827]: Keep consistent margins to avoid clutter on large screens.
+        - generic [ref=e828]:
+          - generic [ref=e829]:
+            - generic [ref=e830]:
+              - generic [ref=e831]: "09"
+              - heading "Micro-Patterns" [level=2] [ref=e832]
+            - paragraph [ref=e833]: Loading states, empty states, badges, and divider treatments.
+          - generic [ref=e834]:
+            - heading "Loading States" [level=3] [ref=e835]
+            - generic [ref=e836]:
+              - heading "Skeleton Screen" [level=4] [ref=e838]
+              - heading "Spinner" [level=4] [ref=e845]
+          - generic [ref=e848]:
+            - heading "Empty States" [level=3] [ref=e849]
+            - generic [ref=e851]:
+              - img [ref=e852]
+              - heading "No results found" [level=4] [ref=e855]
+              - paragraph [ref=e856]: Try a different filter or search term
+              - button "Clear Filters" [ref=e857] [cursor=pointer]
+          - generic [ref=e858]:
+            - heading "Badge / Tag Styles" [level=3] [ref=e859]
+            - generic [ref=e860]:
+              - generic [ref=e861]: ✓ Verified Supplier
+              - generic [ref=e862]: 🔥 Trending
+              - generic [ref=e863]: 20% OFF
+              - generic [ref=e864]: New Arrival
+              - generic [ref=e865]: Featured
+              - generic [ref=e866]: Out of Stock
+          - generic [ref=e867]:
+            - heading "Divider Treatments" [level=3] [ref=e868]
+            - generic [ref=e869]:
+              - generic [ref=e870]:
+                - paragraph [ref=e871]: Subtle Divider (1px solid)
+                - separator [ref=e872]
+              - generic [ref=e873]:
+                - paragraph [ref=e874]: Section Divider (2px)
+                - separator [ref=e875]
+              - generic [ref=e876]:
+                - paragraph [ref=e877]: Spaced Divider
+                - separator [ref=e879]
+      - contentinfo [ref=e880]:
+        - paragraph [ref=e882]: IndiaMART Desktop Style Guide • Designed for consistency, scalability, and modern B2B experiences.
+  - complementary "Edit with Lovable" [ref=e883]:
+    - link "Edit with Lovable" [ref=e884] [cursor=pointer]:
+      - /url: https://lovable.dev/projects/6aae8fc9-56c8-40cb-bfd5-b2672cfc7a42?utm_source=lovable-badge
+      - generic [ref=e885]: Edit with
+      - img [ref=e886]
+    - button "Dismiss" [ref=e891] [cursor=pointer]:
+      - img [ref=e892]
