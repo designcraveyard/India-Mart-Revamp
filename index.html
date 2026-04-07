@@ -288,8 +288,6 @@
     position: sticky;
     top: 88px;
     align-self: start;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
   }
 
   .sidebar-card {
@@ -972,6 +970,7 @@
   .mobile-hamburger { display: none; }
   .mobile-header-actions { display: none; }
   .sidebar-close { display: none; }
+  .mobile-scroll-bar { display: none; }
 
   /* ─── RESPONSIVE: LARGE DESKTOP → SMALL DESKTOP ─── */
   @media (max-width: 1200px) {
@@ -1091,9 +1090,7 @@
 
   /* ─── RESPONSIVE: MOBILE (≤ 600px) ─── */
   @media (max-width: 600px) {
-    .page-container {
-      padding: 0 16px;
-    }
+    .page-container { padding: 0 16px; }
     .header-inner {
       padding: 0 12px;
       height: 56px;
@@ -1107,6 +1104,8 @@
     }
     .search-bar input { font-size: 13px; }
     .header-nav { display: none; }
+
+    /* Mobile header icons */
     .mobile-header-actions {
       display: flex;
       align-items: center;
@@ -1130,19 +1129,52 @@
     .mobile-header-actions svg { width: 22px; height: 22px; }
     .mobile-header-actions .badge {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 0; right: 0;
       background: var(--destructive);
       color: #fff;
       font-size: 9px;
       font-weight: 700;
-      width: 16px;
-      height: 16px;
+      width: 16px; height: 16px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
+    /* Horizontal scroll bars below header */
+    .mobile-scroll-bar {
+      display: block;
+      background: var(--card);
+      border-bottom: 1px solid var(--neutral-200);
+      overflow: hidden;
+    }
+    .mobile-scroll-bar.sticky-scroll {
+      position: sticky;
+      top: 56px;
+      z-index: 90;
+    }
+    .mobile-scroll-inner {
+      display: flex;
+      gap: 8px;
+      padding: 10px 16px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .mobile-scroll-inner::-webkit-scrollbar { display: none; }
+    .mobile-scroll-inner .city-pill,
+    .mobile-scroll-inner .filter-chip {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .mobile-scroll-inner .filter-chip {
+      display: inline-flex;
+      width: auto;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+
+    /* Breadcrumb */
     .breadcrumb {
       font-size: 12px;
       padding: 12px 0 0;
@@ -1152,40 +1184,66 @@
     }
     .page-title-section h1 { font-size: 20px; }
     .page-title-section { padding: 12px 0 16px; }
+
+    /* ─── FULL-WIDTH PRODUCT CARDS ─── */
     .product-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      grid-template-columns: 1fr;
+      gap: 12px;
     }
-    .pc-image { aspect-ratio: 1/1; }
-    .pc-body { padding: 10px 12px 12px; }
-    .pc-name { font-size: 13px !important; -webkit-line-clamp: 2; }
-    .pc-price { font-size: 15px; }
+    .product-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+    }
+    .pc-image {
+      aspect-ratio: 1/1;
+      border-radius: 12px 0 0 12px;
+      height: 100%;
+    }
+    .pc-image img { border-radius: 12px 0 0 12px; }
+    .pc-body { padding: 12px 14px; }
+    .pc-name { font-size: 14px !important; }
+    .pc-price { font-size: 16px; }
     .pc-price-unit { font-size: 11px; }
-    .pc-specs { display: none; }
-    .pc-supplier-meta .trust-badges { display: none; }
-    .pc-supplier-rating .yrs { display: none; }
-    .pc-supplier-name { font-size: 11px; }
+    .pc-price-row { margin-bottom: 6px; }
+    .pc-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 6px;
+      margin-bottom: 8px;
+    }
+    .pc-spec { font-size: 11px; }
+    .pc-supplier { padding-top: 8px; }
+    .pc-supplier-name { font-size: 12px; }
     .pc-supplier-meta .loc { font-size: 10px; }
-    .pc-supplier-rating .rating-text { font-size: 10px; }
     .pc-supplier-rating .stars svg { width: 10px; height: 10px; }
-    .pc-cta-row { flex-direction: column; gap: 6px; }
-    .pc-cta { padding: 9px 6px; font-size: 12px; border-radius: 8px; }
+    .pc-supplier-rating .rating-text { font-size: 10px; }
+    .pc-cta-row {
+      flex-direction: row;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .pc-cta { padding: 8px 10px; font-size: 12px; border-radius: 8px; }
     .pc-cta svg { width: 13px; height: 13px; }
     .pc-cta-whatsapp {
-      width: 100%;
-      height: 36px;
+      width: 36px; height: 36px;
+      flex-shrink: 0;
       border-radius: 8px;
-      flex-shrink: 1;
     }
-    .quote-banner {
+    .pc-cta-whatsapp svg { width: 18px; height: 18px; }
+
+    /* Quote banner */
+    .quote-banner-wrapper .quote-banner {
       padding: 20px 16px;
       grid-template-columns: 1fr;
       gap: 16px;
     }
+    .quote-banner-wrapper .product-card { display: flex; flex-direction: column; }
     .quote-banner-text h3 { font-size: 16px; }
     .quote-banner-text p { font-size: 13px; }
     .quote-banner-form input, .quote-banner .country-code { height: 40px; font-size: 13px; }
     .quote-banner .submit-btn { height: 44px; font-size: 13px; }
+
+    /* Price & footer */
     .price-section { margin-top: 24px; }
     .price-section-header { padding: 14px 16px; font-size: 14px; }
     .price-row { padding: 12px 16px; font-size: 13px; }
@@ -1202,13 +1260,12 @@
       padding: 16px;
       font-size: 12px;
     }
+
     /* Mobile bottom nav */
     .mobile-bottom-nav {
       display: flex;
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       background: var(--card);
       border-top: 1px solid var(--neutral-200);
       z-index: 100;
@@ -1241,8 +1298,7 @@
       top: -12px;
       background: var(--primary);
       color: #fff;
-      width: 48px;
-      height: 48px;
+      width: 48px; height: 48px;
       border-radius: 50%;
       padding: 0;
       box-shadow: 0 4px 14px rgba(29,132,128,.35);
@@ -1251,7 +1307,8 @@
     }
     .mobile-bottom-nav .nav-item.post-btn svg { width: 24px; height: 24px; }
     .footer { padding-bottom: 72px; }
-    .product-list-spacer { height: 72px; }
+
+    /* Sidebar fullscreen on mobile */
     .sidebar {
       width: 100%;
       max-width: 100vw;
@@ -1265,36 +1322,15 @@
       border-bottom: 1px solid var(--neutral-200);
       margin-bottom: 8px;
     }
-    .sidebar-close-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--neutral-900);
-    }
+    .sidebar-close-title { font-size: 18px; font-weight: 700; color: var(--neutral-900); }
     .sidebar-close-btn {
-      background: none;
-      border: none;
-      padding: 8px;
-      cursor: pointer;
-      color: var(--neutral-600);
-      display: flex;
-      align-items: center;
-      border-radius: 8px;
-      transition: background .15s;
+      background: none; border: none; padding: 8px;
+      cursor: pointer; color: var(--neutral-600);
+      display: flex; align-items: center;
+      border-radius: 8px; transition: background .15s;
     }
     .sidebar-close-btn:hover { background: var(--neutral-200); }
     .sidebar-close-btn svg { width: 22px; height: 22px; }
-  }
-
-  /* ─── RESPONSIVE: SMALL MOBILE (≤ 380px) ─── */
-  @media (max-width: 380px) {
-    .product-grid {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .pc-image { aspect-ratio: 4/3; }
-    .pc-specs { display: flex; }
-    .pc-cta-row { flex-direction: row; }
-    .pc-cta-whatsapp { width: 40px; height: 40px; flex-shrink: 0; }
   }
 
   /* ─── SCROLLBAR ─── */
@@ -1356,6 +1392,39 @@
     </div>
   </div>
 </header>
+
+<!-- Mobile horizontal scroll: City pills -->
+<div class="mobile-scroll-bar">
+  <div class="mobile-scroll-inner">
+    <span class="city-pill active">Delhi</span>
+    <span class="city-pill">Gurugram</span>
+    <span class="city-pill">Noida</span>
+    <span class="city-pill">Ghaziabad</span>
+    <span class="city-pill">Faridabad</span>
+    <span class="city-pill">Greater Noida</span>
+    <span class="city-pill">Sonipat</span>
+    <span class="city-pill">Rohtak</span>
+    <span class="city-pill">Meerut</span>
+  </div>
+</div>
+
+<!-- Mobile horizontal scroll: Filter chips (sticky) -->
+<div class="mobile-scroll-bar sticky-scroll">
+  <div class="mobile-scroll-inner">
+    <button class="filter-chip" onclick="openSidebar()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+      Filters
+    </button>
+    <button class="filter-chip">Below &#8377;2,000</button>
+    <button class="filter-chip">&#8377;2K &ndash; &#8377;5K</button>
+    <button class="filter-chip">&#8377;5K &ndash; &#8377;15K</button>
+    <button class="filter-chip">Above &#8377;15K</button>
+    <button class="filter-chip active">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Verified Only
+    </button>
+  </div>
+</div>
 
 <div class="page-container">
 
