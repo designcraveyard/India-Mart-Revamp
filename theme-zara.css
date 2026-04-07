@@ -81,7 +81,7 @@ body {
 
 /* ─── HEADER ─── */
 .header {
-  background: var(--zara-black) !important;
+  background: #1d8480 !important;
   box-shadow: none !important;
   border-bottom: none !important;
 }
@@ -746,8 +746,8 @@ body {
   text-transform: uppercase !important;
   letter-spacing: var(--zara-tracking-wide) !important;
   color: var(--zara-white) !important;
-  background: var(--zara-black) !important;
-  border: 1px solid var(--zara-black) !important;
+  background: #1d8480 !important;
+  border: 1px solid #1d8480 !important;
   padding: 12px 20px !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
@@ -756,9 +756,9 @@ body {
 }
 
 .pc-cta:hover {
-  background: var(--zara-gold) !important;
-  border-color: var(--zara-gold) !important;
-  color: var(--zara-black) !important;
+  background: #155f5c !important;
+  border-color: #155f5c !important;
+  color: var(--zara-white) !important;
 }
 
 .pc-cta-whatsapp {

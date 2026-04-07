@@ -61,9 +61,8 @@ h1, h2, h3, h4, h5, h6,
 
 /* ─── HEADER ─── */
 .header {
-  background: #FFFFFF !important;
+  background: #1d8480 !important;
   box-shadow: 0 1px 0 rgba(0,0,0,.08) !important;
-  border-bottom: 1px solid var(--neutral-200) !important;
 }
 
 .header-inner {
@@ -92,7 +91,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: 'Nunito', sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
-  color: var(--primary) !important;
+  color: #fff !important;
   letter-spacing: -.5px !important;
 }
 
@@ -169,7 +168,7 @@ h1, h2, h3, h4, h5, h6,
   align-items: center !important;
   gap: 6px !important;
   padding: 10px 14px !important;
-  color: var(--neutral-700) !important;
+  color: rgba(255,255,255,.85) !important;
   text-decoration: none !important;
   font-size: 14px !important;
   font-weight: 600 !important;
@@ -823,7 +822,7 @@ h1, h2, h3, h4, h5, h6,
 .pc-cta {
   flex: 1 !important;
   padding: 11px 8px !important;
-  background: linear-gradient(135deg, #FF385C 0%, #E61E4D 50%, #D70466 100%) !important;
+  background: #1d8480 !important;
   color: #fff !important;
   border: none !important;
   border-radius: 12px !important;
@@ -841,8 +840,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .pc-cta:hover {
+  background: #155f5c !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 14px rgba(255,56,92,.35) !important;
+  box-shadow: 0 4px 14px rgba(29,132,128,.35) !important;
 }
 
 .pc-cta svg {

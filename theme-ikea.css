@@ -52,7 +52,7 @@ a:hover { color: var(--ikea-blue-dark) !important; }
    ════════════════════════════════════════════════════════════ */
 
 .header {
-  background: var(--ikea-blue) !important;
+  background: #1d8480 !important;
   padding: 0 !important;
   border-bottom: 3px solid var(--ikea-yellow) !important;
   box-shadow: none !important;
@@ -732,14 +732,14 @@ a:hover { color: var(--ikea-blue-dark) !important; }
   cursor: pointer !important;
   text-align: center !important;
   transition: all .15s !important;
-  background: var(--ikea-yellow) !important;
-  color: var(--text-primary) !important;
+  background: #1d8480 !important;
+  color: #FFFFFF !important;
   text-transform: uppercase !important;
   letter-spacing: .3px !important;
 }
 
 .pc-cta:hover {
-  background: var(--ikea-yellow-hover) !important;
+  background: #155f5c !important;
 }
 
 .pc-cta-whatsapp {
