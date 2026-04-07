@@ -1092,17 +1092,23 @@
   @media (max-width: 600px) {
     .page-container { padding: 0 16px; }
     .header-inner {
-      padding: 0 12px;
-      height: 56px;
-      gap: 10px;
+      padding: 0 10px;
+      height: 52px;
+      gap: 8px;
     }
-    .logo-text { font-size: 17px; }
+    .logo { gap: 4px; }
+    .logo svg { height: 20px; width: 20px; }
+    .logo-text { font-size: 15px; letter-spacing: -.2px; }
     .search-bar {
-      height: 40px;
+      height: 38px;
       padding: 0 10px;
       border-radius: 8px;
+      min-width: 0;
+      flex: 1;
     }
     .search-bar input { font-size: 13px; }
+    .search-bar .cam-btn { padding: 2px; }
+    .search-bar .cam-btn svg { width: 18px; height: 18px; }
     .header-nav { display: none; }
 
     /* Mobile header icons */
@@ -1192,15 +1198,21 @@
     }
     .product-card {
       display: grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 130px 1fr;
     }
     .pc-image {
-      aspect-ratio: 1/1;
+      aspect-ratio: auto;
       border-radius: 12px 0 0 12px;
       height: 100%;
     }
     .pc-image img { border-radius: 12px 0 0 12px; }
-    .pc-body { padding: 12px 14px; }
+    .pc-image .wishlist-btn { display: none; }
+    .pc-image .img-count {
+      bottom: 6px; right: 6px;
+      font-size: 10px;
+      padding: 3px 7px;
+    }
+    .pc-body { padding: 12px 14px; position: relative; }
     .pc-name { font-size: 14px !important; }
     .pc-price { font-size: 16px; }
     .pc-price-unit { font-size: 11px; }
