@@ -6,36 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 
-/* ─── ROOT CUSTOM PROPERTIES ─── */
-:root {
-  --primary: #FF385C !important;
-  --primary-light: #FFE4E9 !important;
-  --primary-hover: #E0294A !important;
-  --primary-active: #C41E3A !important;
-  --primary-disabled: #FFB0BF !important;
-  --secondary: #00A699 !important;
-  --secondary-hover: #008F84 !important;
-  --secondary-light: #E0F7F5 !important;
-  --neutral-900: #222222 !important;
-  --neutral-700: #484848 !important;
-  --neutral-600: #717171 !important;
-  --neutral-400: #B0B0B0 !important;
-  --neutral-300: #DDDDDD !important;
-  --neutral-200: #EBEBEB !important;
-  --neutral-100: #F7F7F7 !important;
-  --success: #008A05 !important;
-  --destructive: #C13515 !important;
-  --warning: #E07912 !important;
-  --info: #428BFF !important;
-  --background: #FFF8F6 !important;
-  --card: #FFFFFF !important;
-  --border: #EBEBEB !important;
-  --shadow-depth-1: 0 1px 2px rgba(0,0,0,.04), 0 2px 6px rgba(0,0,0,.04) !important;
-  --shadow-depth-2: 0 6px 20px rgba(0,0,0,.08) !important;
-  --shadow-depth-3: 0 12px 40px rgba(0,0,0,.12) !important;
-  --gold: #FFB400 !important;
-}
-
 /* ─── GLOBAL ─── */
 * {
   transition-timing-function: cubic-bezier(.4,0,.2,1) !important;
@@ -43,9 +13,6 @@
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  background: var(--background) !important;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E") !important;
-  color: var(--neutral-900) !important;
   -webkit-font-smoothing: antialiased !important;
   line-height: 1.5 !important;
 }
@@ -61,7 +28,6 @@ h1, h2, h3, h4, h5, h6,
 
 /* ─── HEADER ─── */
 .header {
-  background: #1d8480 !important;
   box-shadow: 0 1px 0 rgba(0,0,0,.08) !important;
 }
 
@@ -84,19 +50,13 @@ h1, h2, h3, h4, h5, h6,
 
 .logo svg {
   height: 32px !important;
-  color: var(--primary) !important;
 }
 
 .logo-text {
   font-family: 'Nunito', sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
-  color: #fff !important;
   letter-spacing: -.5px !important;
-}
-
-.logo-text span {
-  color: var(--neutral-900) !important;
 }
 
 /* Search bar — Airbnb rounded pill */
@@ -117,11 +77,10 @@ h1, h2, h3, h4, h5, h6,
 
 .search-bar:focus-within {
   border-color: var(--primary) !important;
-  box-shadow: 0 0 0 4px rgba(255,56,92,.12), 0 2px 8px rgba(0,0,0,.06) !important;
+  box-shadow: 0 0 0 4px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.06) !important;
 }
 
 .search-bar svg {
-  color: var(--primary) !important;
   flex-shrink: 0 !important;
 }
 
@@ -142,7 +101,6 @@ h1, h2, h3, h4, h5, h6,
 .search-bar .cam-btn {
   background: none !important;
   border: none !important;
-  color: var(--primary) !important;
   cursor: pointer !important;
   padding: 4px !important;
   display: flex !important;
@@ -168,7 +126,6 @@ h1, h2, h3, h4, h5, h6,
   align-items: center !important;
   gap: 6px !important;
   padding: 10px 14px !important;
-  color: rgba(255,255,255,.85) !important;
   text-decoration: none !important;
   font-size: 14px !important;
   font-weight: 600 !important;
@@ -181,11 +138,6 @@ h1, h2, h3, h4, h5, h6,
   position: relative !important;
 }
 
-.header-nav-link:hover {
-  background: var(--neutral-100) !important;
-  color: var(--neutral-900) !important;
-}
-
 .header-nav-link svg {
   width: 20px !important;
   height: 20px !important;
@@ -195,8 +147,6 @@ h1, h2, h3, h4, h5, h6,
   position: absolute !important;
   top: 2px !important;
   right: 4px !important;
-  background: var(--primary) !important;
-  color: #fff !important;
   font-size: 10px !important;
   font-weight: 700 !important;
   width: 18px !important;
@@ -205,7 +155,6 @@ h1, h2, h3, h4, h5, h6,
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border: 2px solid #fff !important;
 }
 
 /* Mobile header actions */
@@ -216,7 +165,6 @@ h1, h2, h3, h4, h5, h6,
 .mobile-header-actions button {
   background: none !important;
   border: none !important;
-  color: var(--neutral-700) !important;
   cursor: pointer !important;
   padding: 8px !important;
   display: flex !important;
@@ -411,7 +359,6 @@ h1, h2, h3, h4, h5, h6,
 .sidebar-card-header svg {
   width: 18px !important;
   height: 18px !important;
-  color: var(--primary) !important;
 }
 
 .sidebar-card-body {
@@ -650,8 +597,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .wishlist-btn:hover svg {
-  color: #FF385C !important;
-  fill: #FF385C !important;
+  transition: color .2s, fill .2s !important;
 }
 
 /* Card body */
@@ -770,15 +716,8 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: .3px !important;
 }
 
-.trust-badge.gst {
-  background: #EEF4FF !important;
-  color: #3B6DD8 !important;
-}
-
-.trust-badge.trust {
-  background: #E6F9EE !important;
-  color: #008A05 !important;
-}
+.trust-badge.gst {}
+.trust-badge.trust {}
 
 .pc-supplier-rating {
   display: flex !important;
@@ -822,8 +761,6 @@ h1, h2, h3, h4, h5, h6,
 .pc-cta {
   flex: 1 !important;
   padding: 11px 8px !important;
-  background: #1d8480 !important;
-  color: #fff !important;
   border: none !important;
   border-radius: 12px !important;
   font-size: 14px !important;
@@ -840,9 +777,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .pc-cta:hover {
-  background: #155f5c !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 14px rgba(29,132,128,.35) !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15) !important;
 }
 
 .pc-cta svg {
@@ -854,9 +790,6 @@ h1, h2, h3, h4, h5, h6,
   width: 42px !important;
   height: 42px !important;
   flex-shrink: 0 !important;
-  background: #fff !important;
-  color: #25D366 !important;
-  border: 1.5px solid var(--neutral-300) !important;
   border-radius: 12px !important;
   cursor: pointer !important;
   transition: all .2s !important;
@@ -869,8 +802,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .pc-cta-whatsapp:hover {
-  border-color: #25D366 !important;
-  background: #f0faf3 !important;
   transform: translateY(-1px) !important;
 }
 
@@ -886,9 +817,7 @@ h1, h2, h3, h4, h5, h6,
 
 .quote-banner {
   padding: 36px 44px !important;
-  background: linear-gradient(135deg, #BD1E59 0%, #FF385C 60%, #FF5A5F 100%) !important;
   border-radius: 24px !important;
-  color: #fff !important;
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
   gap: 32px !important;
@@ -1002,7 +931,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .price-section-header svg {
-  color: var(--primary) !important;
   width: 20px !important;
   height: 20px !important;
 }
@@ -1026,7 +954,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .price-row:hover {
-  background: #FFF0F3 !important;
+  background: var(--neutral-100) !important;
 }
 
 .item-name {
@@ -1042,12 +970,9 @@ h1, h2, h3, h4, h5, h6,
   white-space: nowrap !important;
 }
 
-/* ─── FOOTER — warm off-white, minimal ─── */
+/* ─── FOOTER ─── */
 .footer {
-  background: #FFF3EF !important;
-  color: var(--neutral-700) !important;
   margin-top: 48px !important;
-  border-top: 1px solid var(--neutral-200) !important;
 }
 
 .footer-inner {
@@ -1062,7 +987,6 @@ h1, h2, h3, h4, h5, h6,
 .footer-brand .logo-text {
   font-size: 24px !important;
   margin-bottom: 12px !important;
-  color: var(--primary) !important;
 }
 
 .footer-brand p {
@@ -1265,7 +1189,6 @@ h1, h2, h3, h4, h5, h6,
   .page-container { padding: 0 16px !important; }
 
   .header {
-    background: #fff !important;
     border-bottom: 1px solid var(--neutral-200) !important;
   }
 
@@ -1434,8 +1357,6 @@ h1, h2, h3, h4, h5, h6,
     display: flex !important;
     position: fixed !important;
     bottom: 0 !important; left: 0 !important; right: 0 !important;
-    background: #fff !important;
-    border-top: 1px solid var(--neutral-200) !important;
     z-index: 100 !important;
     padding: 6px 0 !important;
     padding-bottom: max(6px, env(safe-area-inset-bottom)) !important;
@@ -1459,17 +1380,15 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'DM Sans', sans-serif !important;
     transition: color .2s !important;
   }
-  .nav-item.active { color: var(--primary) !important; }
+  .nav-item.active {}
   .nav-item svg { width: 22px !important; height: 22px !important; }
   .nav-item.post-btn {
     position: relative !important;
     top: -14px !important;
-    background: linear-gradient(135deg, #FF385C 0%, #D70466 100%) !important;
-    color: #fff !important;
     width: 50px !important; height: 50px !important;
     border-radius: 50% !important;
     padding: 0 !important;
-    box-shadow: 0 4px 16px rgba(255,56,92,.35) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,.15) !important;
     justify-content: center !important;
     font-size: 0 !important;
   }

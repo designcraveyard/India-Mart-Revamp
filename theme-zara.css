@@ -987,13 +987,13 @@ body {
 
 /* ─── MOBILE BOTTOM NAV ─── */
 .mobile-bottom-nav {
+  display: none !important;
   position: fixed !important;
   bottom: 0 !important;
   left: 0 !important;
   right: 0 !important;
   background: var(--zara-black) !important;
   border-top: 1px solid rgba(255,255,255,0.1) !important;
-  display: flex !important;
   justify-content: space-around !important;
   padding: 8px 0 !important;
   z-index: 100 !important;
@@ -1152,6 +1152,11 @@ body {
 
   .sidebar-card-header {
     font-size: 10px !important;
+  }
+
+  /* Show bottom nav on mobile */
+  .mobile-bottom-nav {
+    display: flex !important;
   }
 
   body {

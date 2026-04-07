@@ -981,6 +981,7 @@ a:hover { color: var(--ikea-blue-dark) !important; }
    ════════════════════════════════════════════════════════════ */
 
 .mobile-bottom-nav {
+  display: none !important;
   position: fixed !important;
   bottom: 0 !important;
   left: 0 !important;
@@ -988,7 +989,6 @@ a:hover { color: var(--ikea-blue-dark) !important; }
   z-index: 100 !important;
   background: var(--card) !important;
   border-top: 1px solid var(--border) !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: space-around !important;
   padding: 6px 0 !important;
@@ -1191,6 +1191,11 @@ a:hover { color: var(--ikea-blue-dark) !important; }
 
   .content-top-bar {
     padding: 6px 10px !important;
+  }
+
+  /* Show bottom nav on mobile */
+  .mobile-bottom-nav {
+    display: flex !important;
   }
 
   /* Bottom nav padding */
